@@ -19,24 +19,25 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//Ánh xạ
+        //Ánh xạ
         edtSo1 = findViewById(R.id.editTextSo1);
         edtSo2 = findViewById(R.id.editTextSo2);
         btnSum = findViewById(R.id.buttonTinhTong);
         tvKetQua = findViewById(R.id.textViewKetQua);
 
-//Bắt sự kiện
+        //Bắt sự kiện
         btnSum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//Sữa lỗi khi để trống dữ liệu
+                //Sữa lỗi khi để trống dữ liệu
                 if (edtSo1.getText().toString().trim().length() == 0 || edtSo2.getText().toString().trim().length() == 0) {
                     Toast.makeText(MainActivity.this, "Vui lòng nhập số vào!", Toast.LENGTH_SHORT).show();
                 } else {
-//Ép kiểu dữ liệu về kiểu số thập phân
+                    //Ép kiểu dữ liệu về kiểu số thập phân
                     double so1 = Double.parseDouble(edtSo1.getText().toString());
                     double so2 = Double.parseDouble(edtSo2.getText().toString());
                     double sum = so1 + so2;
+                    //Hiển thị kết quả ra màn hình
                     tvKetQua.setText(String.valueOf(sum));
                 }
             }
