@@ -34,6 +34,8 @@
         android:id="@+id/textViewKetQua"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:textSize="68sp"
         android:textColor="#bb00ff"
         android:text="Kết Quả"
         android:textAlignment="center"
